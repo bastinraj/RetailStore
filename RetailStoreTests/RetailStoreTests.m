@@ -31,8 +31,8 @@
 -(void) testManagedObjectContext
 {
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    XCTAssertNotNil(appDelegate.managedObjectContext, @"Core data managed object is not nil..");
-    
+    //XCTAssertNotNil(appDelegate.managedObjectContext, @"Core data managed object is not nil..");
+    XCTAssertNil(appDelegate.managedObjectContext, @"Core data managed object is nil..");
 }
 
 - (void)testExample
