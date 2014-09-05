@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "AppDelegate.h"
 
 @interface RetailStoreTests : XCTestCase
 
@@ -26,9 +27,17 @@
     [super tearDown];
 }
 
+
+-(void) testManagedObjectContext
+{
+    AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
+    XCTAssertNotNil(appDelegate.managedObjectContext, @"Core data managed object is not nil..");
+    
+}
+
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    //XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
 }
 
 @end
